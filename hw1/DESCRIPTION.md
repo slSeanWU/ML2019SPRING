@@ -5,7 +5,7 @@
  .csv file
 ## III. Models Used
 ## IV. Result
-**Error Measure: Root-mean-square Error(RMSE)**
-> Kaggle in-class competition results
+**Error Measure: Root-mean-square Error(RMSE)** 
+Kaggle in-class competition results  
 **Model 1--Hand-crafted GD with adagrad optimizer**
  * Public score: 
