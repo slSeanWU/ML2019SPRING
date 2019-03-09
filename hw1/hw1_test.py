@@ -3,7 +3,6 @@ import csv
 import numpy
 
 ## Read test input
-print(sys.argv)
 testFile, outputFile = sys.argv[1], sys.argv[2]
 testX = []
 

@@ -61,7 +61,7 @@ Xt = X.transpose()
 
 w = numpy.zeros( len(X[0]) )
 AdaGrad = numpy.zeros( len(X[0]) )
-epochs = 5000
+epochs = 50000
 eta = 150.0
 
 for i in range(epochs):
