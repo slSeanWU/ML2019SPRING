@@ -1,4 +1,4 @@
-# HW1: Binary Classification -- Income >50K ?
+# HW2: Binary Classification -- Income >50K ?
 ## I. Task
  Given real-world data (_including **meteorological factors** and **pollutant concentrations**_) observed hourly for the whole year at Fengyuan, Taiwan, try to predict **future PM2.5 concentration** using **Linear Regression**
 ## II. Data
