@@ -4,11 +4,19 @@ from scipy.special import expit
 
 ## Read csv and Feature Extraction
 
-# features to be dropped: final weight, marital status
+# feature to be dropped: final weight
 Cols = pd.read_csv('./X_train', nrows=1)
-toDrop = ['fnlwgt', ' Divorced',' Married-AF-spouse',' Married-civ-spouse',
-              ' Married-spouse-absent',' Never-married',' Separated',' Widowed']
+'''candidate toDrop = ['fnlwgt', ' Divorced',' Married-AF-spouse',' Married-civ-spouse',
+              ' Married-spouse-absent',' Never-married',' Separated',' Widowed']'''
+
+toDrop = ['fnlwgt']
 raw_X = pd.read_csv('./X_train', usecols=[x for x in Cols if x not in toDrop] )
+
+## add years of education and age squared
+edu_yr = pd.read_csv('./train.csv', usecols=['education_num']).to_numpy(dtype=np.double)
+edu_yr = edu_yr.reshape( (edu_yr.shape[0],1) )
+age_sqr = ( raw_X['age'].to_numpy(dtype=np.double) ) ** 2
+age_sqr = age_sqr.reshape( (age_sqr.shape[0],1) )
 
 y = pd.read_csv('./Y_train').to_numpy(dtype=np.double)
 y = y.reshape( (len(y),) )
@@ -16,6 +24,8 @@ y = y.reshape( (len(y),) )
 print( raw_X.head() )
 
 X = raw_X.to_numpy(dtype=np.double)
+print(X.shape, age_sqr.shape, edu_yr.shape)
+X = np.concatenate( (X, age_sqr, edu_yr), axis=1 )
 print(X[:30])
 print(y[:30])
 
@@ -52,32 +62,3 @@ for i in range(epochs):
 
 np.savez('model_GD_oneHot', w=w, mins=featMins, maxs=featMaxs)
 
-'''
-## Read test data and produce output
-
-test_data = pd.read_csv('./test.csv', usecols=cols[:-1])
-testX = []
-
-for idx, person in test_data.iterrows():
-    inputVec = [ float(person['age']), float(person['age'] ** 2) ]
-
-    if person['education'] in eduDict:
-        inputVec.append( eduDict[ person['education'] ] )
-    else:
-        inputVec.append( 0.0 )
-
-    inputVec.extend( [ float(person['education_num']), float(person['education_num'] ** 2) ] )
-    inputVec.append( float( person['occupation'] in occuT ) )
-    inputVec.append( float( person['race'] in raceT ) )
-    inputVec.append( float( person['sex'] == ' Male' ) )
-    inputVec.append( float(person['hours_per_week']) )
-
-    testX.append( inputVec )
-
-testX = (testX - featMins) / (featMaxs - featMins + 1e-18)
-bias = np.ones( (len(testX), 1) )
-testX = np.append(testX, bias, axis=1)
-
-Soft = expit( np.dot(testX, w) )
-plt.hist( Soft, [0.05*x for x in range(21)] )
-plt.show()'''
