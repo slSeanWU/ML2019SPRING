@@ -1,6 +1,6 @@
 # HW2: Binary Classification -- Income >50K ?
 ## I. Task
- Given real-world data (_including **meteorological factors** and **pollutant concentrations**_) observed hourly for the whole year at Fengyuan, Taiwan, try to predict **future PM2.5 concentration** using **Linear Regression**
+ Given labeled training data consisting of personal attributes (_including **age**, **education**, **weekly working hours**...etc._), try to come up with a **Binary Classifier** which predicts whether a person earns _**>50K**_.
 ## II. Data
  .csv file
 ## III. Result
