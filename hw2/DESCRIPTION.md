@@ -11,10 +11,14 @@
 **Error Measure: Categorical Accuracy**  
 > Kaggle in-class competition results   
 >  
-**Model 1--Hand-crafted GD w/ adagrad optimizer \[all features linear\]**
- * Public score: 5.69152  
- * Private score: 7.21953
+**Model 1--Hand-crafted Logistic Regression w/ adagrad optimizer \[added "age_squared" and "education yrs"\]**
+ * Public score: 85.552 % 
+ * Private score: 85.468 %
     
-**Model 2--Scikit-learn Ridge Regression w/ lambda=0.03 \[feature engineering applied\]**
- * Public score: 5.51633  
- * Private score: 7.01786 _(Final Rank: Top 25%, **43/176**)_
+**Model 2--Scikit-learn Linear SVC w/ C=20.0 \[used same features as in Model 1\]**
+ * Public score: 85.577 % 
+ * Private score: 85.456 %
+   
+**Model 3--Scikit-learn Gradient Boosting Classifier w/ depth=6, 250 estimators \[applied parameter tuning\]**
+ * Public score: 87.383 % 
+ * Private score: 87.485 % _(Final Rank: Top 15%, **24/165**)_
