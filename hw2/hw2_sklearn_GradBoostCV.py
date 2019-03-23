@@ -32,7 +32,7 @@ featMaxs = np.max(X, axis=0)
 X = (X - featMins) / (featMaxs - featMins + 1e-32)
 
 
-## Training: Sklearn LinearSVM w/ parameter tuning
+## Training: Sklearn Gradient Boosting Classifier w/ parameter tuning
 #X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
 
 X_train, y_train = X, y
