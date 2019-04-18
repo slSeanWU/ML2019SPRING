@@ -1,11 +1,16 @@
-# HW2: Binary Classification -- Income >50K ?
+# HW3: Convolutional Neural Network
 ## I. Task
- Given labeled training data consisting of personal attributes (_including **age**, **education**, **weekly working hours**...etc._), try to come up with a **Binary Classifier** which predicts whether a person earns _**>50K**_.
+ Given labeled training data (grayscale face images), classify the **Facial Expression** into the following 7 categories
+ * 0: Angry   
+ * 1: Disgust   
+ * 2: Fear  
+ * 3: Happy    
+ * 4: Sad    
+ * 5: Surprise    
+ * 6: Neutral    
 ## II. Data
- * .csv files
- > Raw data containing categorical attributes _(e.g. marital status, highest degree...)_, as well as continuous attributes
- * X_train, y_train, X_test
- > Extracted data with **one-hot** encoding for categorical features
+ * FER2013 Dataset
+ > 48\*48 Non-aligned grayscale face images _(28709 for training, 7178 for competition)_
  
 ## III. Result
 **Error Measure: Categorical Accuracy**  
