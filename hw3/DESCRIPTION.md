@@ -48,3 +48,12 @@
 **Error Measure: Categorical Accuracy**  
  * Public score: 70.966 % 
  * Private score: 70.716 % _(Final Rank: Top 19%, **27/147**)_
+ 
+## V. Attachments 
+ * Confusion Matrix
+> Tested with 20% of stratified samples from training data
+>  
+ * Training progress
+> Records the accuracy progress during training _(Model 2)_
+>
+ 
