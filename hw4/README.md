@@ -22,23 +22,20 @@ Using the following techniques and some toolkits to **observe** and **explain** 
      - ![](Equations/grad_asc.png)
      - applied **_L2 Normalization_** when computing gradients
  
-**Error Measure: Categorical Accuracy**  
-> Kaggle in-class competition results   
->  
-**Model 1--Hand-crafted Logistic Regression w/ adagrad optimizer \[added "age_squared" and "education yrs"\]**
- * Public score: 85.552 % 
- * Private score: 85.468 %
-    
-**Model 2--Scikit-learn Linear SVC w/ C=20.0 \[used same features as in Model 1\]**
- * Public score: 85.577 % 
- * Private score: 85.456 %
-   
-**Model 3--Scikit-learn Gradient Boosting Classifier w/ depth=6, 250 estimators \[applied parameter tuning\]**
- * Public score: 87.383 % 
- * Private score: 87.485 % _(Final Rank: Top 15%, **24/165**)_
+## IV. LIME Image Explainer
+ * **LIME**: _Local Interpretable Model-Agnostic Explanations_ 
+ * Slice the image into some(~100) _super-pixels_ with the help of `scikit-image`
+ * Feed the CNN with batches of images comprising of different combinations of the _super-pixels_
+ * **Goal**: Find **_Pros_**/**_Cons_** of the image  
+     - _super-pixels_ that _**positively/negatively**_ affect classification scores the most
+     - displayed in _**Green/Red**_ patches on top of the image
  
 ## V. References
  * Deep Inside Convolutional Networks: Visualising Image Classification Models and Saliency Maps
      - https://arxiv.org/pdf/1312.6034.pdf
  * Gradient Ascent for Filter Visualization
      - _page 78~79_, https://www.csie.ntu.edu.tw/~yvchen/f105-adl/doc/161103_ConvolutionalNN.pdf 
+ * Implementation for Generating Filter Visualization
+     - https://medium.com/@jon.froiland/convolutional-neural-networks-part-8-3ac54c9478cc
+ * Guidelines to Using LIME Image Explainer
+     - https://github.com/marcotcr/lime/blob/master/doc/notebooks/Tutorial%20-%20Faces%20and%20GradBoost.ipynb
