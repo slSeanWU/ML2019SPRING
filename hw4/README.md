@@ -16,10 +16,11 @@ Using the following techniques and some toolkits to **observe** and **explain** 
 ## III. Convolution Filters
  * **Goal**: Use **_Gradient Ascent_** to obtain the input picture that produces highest level of activation for a filter 
  * Mathematical explanation:
-     - _Level of Activation_:
+     - _Level of Activation_: 
      - ![](Equations/eq_2.png)
-     - Iterations:
+     - 40 Iterations, starting with image of random noise:
      - ![](Equations/grad_asc.png)
+     - applied **_L2 Normalization_** when computing gradients
  
 **Error Measure: Categorical Accuracy**  
 > Kaggle in-class competition results   
