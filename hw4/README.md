@@ -18,7 +18,7 @@ Using the following techniques and some toolkits to **observe** and **explain** 
  * Mathematical explanation:
      - _Level of Activation_: 
      - ![](Equations/eq_2.png)
-     - 40 Iterations, starting with image of random noise:
+     - 64 Iterations, starting with image of random noise:
      - ![](Equations/grad_asc.png)
      - applied **_L2 Normalization_** when computing gradients
  
