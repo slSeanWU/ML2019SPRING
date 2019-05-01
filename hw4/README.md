@@ -41,4 +41,4 @@ Using the following techniques and some toolkits to **observe** and **explain** 
  * Deep Inside Convolutional Networks: Visualising Image Classification Models and Saliency Maps
      - https://arxiv.org/pdf/1312.6034.pdf
  * Gradient Ascent for Filter Visualization
-     - https://www.csie.ntu.edu.tw/~yvchen/f105-adl/doc/161103_ConvolutionalNN.pdf, _page 78~79_  
+     - _page 78~79_, https://www.csie.ntu.edu.tw/~yvchen/f105-adl/doc/161103_ConvolutionalNN.pdf 
