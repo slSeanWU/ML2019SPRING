@@ -13,7 +13,14 @@ Using the following techniques and some toolkits to **observe** and **explain** 
      - ![](Equations/eq_1.gif)
      - using **_Guided Backpropagation_**
  
-## III. Result
+## III. Convolution Filters
+ * **Goal**: Use **_Gradient Ascent_** to obtain the input picture that produces highest level of activation for a filter 
+ * Mathematical explanation:
+     - _Level of Activation_:
+     - ![](Equations/eq_2.png)
+     - Iterations:
+     - ![](Equations/grad_asc.png)
+ 
 **Error Measure: Categorical Accuracy**  
 > Kaggle in-class competition results   
 >  
@@ -28,3 +35,9 @@ Using the following techniques and some toolkits to **observe** and **explain** 
 **Model 3--Scikit-learn Gradient Boosting Classifier w/ depth=6, 250 estimators \[applied parameter tuning\]**
  * Public score: 87.383 % 
  * Private score: 87.485 % _(Final Rank: Top 15%, **24/165**)_
+ 
+## V. References
+ * Deep Inside Convolutional Networks: Visualising Image Classification Models and Saliency Maps
+     - https://arxiv.org/pdf/1312.6034.pdf
+ * Gradient Ascent for Filter Visualization
+     - https://www.csie.ntu.edu.tw/~yvchen/f105-adl/doc/161103_ConvolutionalNN.pdf, _page 78~79_  
