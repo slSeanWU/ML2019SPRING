@@ -1,11 +1,17 @@
-# HW2: Binary Classification -- Income >50K ?
+# HW4: Explainable AI
 ## I. Task
- Given labeled training data consisting of personal attributes (_including **age**, **education**, **weekly working hours**...etc._), try to come up with a **Binary Classifier** which predicts whether a person earns _**>50K**_.
-## II. Data
- * .csv files
- > Raw data containing categorical attributes _(e.g. marital status, highest degree...)_, as well as continuous attributes
- * X_train, y_train, X_test
- > Extracted data with **one-hot** encoding for categorical features
+Using the following techniques and some toolkits to **observe** and **explain** the CNN classification model trained in HW3
+ * Plot **Saliency Maps**
+ * Visualize **Convolution Filters**
+ * Find 'Pros' and 'Cons' with **LIME Image Explainer**
+ 
+## II. Saliency Maps
+ * Drawn with the help of `keras-vis` module
+ * **Goal**: Find out which pixels affect the classification scores the most when altered slightly
+ * Mathematical explanation: 
+     - Given image **_I<sub>0</sub>_** and classification score **_S<sub>c</sub>_** of class **_c_**, compute:  
+     - ![](Equations/eq_1.gif)
+     - using **_Guided Backpropagation_**
  
 ## III. Result
 **Error Measure: Categorical Accuracy**  
